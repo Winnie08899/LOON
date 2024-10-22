@@ -295,7 +295,7 @@ URL-REGEX, ^http:\/\/\w{32}\.jddebug\.com\/diagnose\?, REJECT
 ^https:\/\/api\.douban\.com\/v2\/app_ads\/splash\w+ reject-dict
 ^https:\/\/(?:img|qnmob)3\.doubanio\.com\/view\/dale-online\/dale_ad\/public\/\w+ reject-dict
 
-# > 得物 //app.dewu.com, cdn.poizon.com
+# 得物 //app.dewu.com, cdn.poizon.com
 ^https?:\/\/app\.dewu\.com\/api\/v1\/app\/advertisement reject
 ^https?:\/\/cdn\.poizon\.com\/node-common\/.*.jpg reject-200
 
