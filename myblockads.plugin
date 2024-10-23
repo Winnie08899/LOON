@@ -59,9 +59,6 @@ IP-CIDR, 180.76.76.112/32, REJECT, no-resolve
 IP-CIDR, 180.76.76.200/32, REJECT, no-resolve
 
 # ======= C ======= #
-# 昌原云充
-DOMAIN, m.adyounger.com, REJECT
-
 # Clue 智库
 DOMAIN, api.helloclue.com, REJECT
 DOMAIN, brahe.apptimize.com, REJECT
@@ -281,11 +278,6 @@ URL-REGEX, ^http:\/\/\w{32}\.jddebug\.com\/diagnose\?, REJECT
 # 百度云 //pan.baidu.com
 ^https:\/\/pan\.baidu\.com\/(?:act\/|aipic\/|aisearch\/|api\/getsyscfg\?|rest\/) reject-dict
 
-# 昌原云充 五代十路 //www.washpayer.com
-^http:\/\/ad\.5tao5ai\.com\/common\/getReceipt\? response-body-json-del payload.adInfo
-^https:\/\/www\.washpayer\.com\/(?:ad\/getBannerAd|ad\/user-adword|user\/getBannerList) reject-dict
-^https:\/\/www\.washpayer\.com\/common\/getReceipt response-body-json-del payload.adInfo
-
 # 豆瓣 //api.douban.com, img3.doubanio.com, qnmob3.doubanio.com
 ^https:\/\/api\.douban\.com\/v2\/app_ads\/splash\w+ reject-dict
 ^https:\/\/(?:img|qnmob)3\.doubanio\.com\/view\/dale-online\/dale_ad\/public\/\w+ reject-dict
@@ -358,9 +350,6 @@ http-response ^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list script-pat
 http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(?:cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) script-path = https://raw.githubusercontent.com/Winnie08899/Loon/refs/heads/main/myBlockAds.js, requires-body = true, tag = taobao_1
 http-response ^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path = https://raw.githubusercontent.com/Winnie08899/Loon/refs/heads/main/myBlockAds.js, requires-body = true, tag = taobao_2
 
-# 昌原云充 五代十路 //www.washpayer.com
-http-response ^https:\/\/www\.washpayer\.com\/user\/message\/equipmentPara\? script-path = https://raw.githubusercontent.com/Winnie08899/Loon/refs/heads/main/changyuan.js, requires-body = true, tag = changyuan
-
 # 京东 //api.m.jd.com
 http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) script-path = https://raw.githubusercontent.com/Winnie08899/Loon/refs/heads/main/jingdong.js, requires-body = true, tag = jingdong
 
@@ -379,4 +368,4 @@ http-response ^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/ script-pa
 http-response ^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent script-path = https://raw.githubusercontent.com/Winnie08899/Loon/refs/heads/main/cloud139.js, requires-body = true, tag = cloud139_2
 
 [MITM]
-hostname = ad.12306.cn, mobile.12306.cn, list-app-m.i4.cn, *api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, www.washpayer.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, app.dewu.com, cdn.poizon.com, image.mybank.icbc.com.cn, hfapp-service.qweather.net, acs-m.freshippo.com, api.m.jd.com, gab.122.gov.cn, api.coolapk.com, adserviceretry.kglink.cn, gateway.kugou.com, p0.pipi.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com, api.m.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, ad.mcloud.139.com, jzts.cmpassport.com
+hostname = ad.12306.cn, mobile.12306.cn, list-app-m.i4.cn, *api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, app.dewu.com, cdn.poizon.com, image.mybank.icbc.com.cn, hfapp-service.qweather.net, acs-m.freshippo.com, api.m.jd.com, gab.122.gov.cn, api.coolapk.com, adserviceretry.kglink.cn, gateway.kugou.com, p0.pipi.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com, api.m.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, ad.mcloud.139.com, jzts.cmpassport.com
