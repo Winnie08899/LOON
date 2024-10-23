@@ -242,11 +242,6 @@ DOMAIN, dns.weixin.qq.com.cn, REJECT
 # 小米
 DOMAIN, sdkconfig.ad.xiaomi.com, REJECT
 
-# 迅雷 解除版权限制
-#DOMAIN, hub5btmain.v6.shub.sandai.net, REJECT
-#DOMAIN, hub5emu.v6.shub.sandai.net, REJECT
-#DOMAIN, hub5idx.v6.shub.sandai.net, REJECT
-
 # ======= Y ======= #
 # 移花宫
 DOMAIN, tong.8888888888.bid, REJECT
