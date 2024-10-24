@@ -272,9 +272,6 @@ URL-REGEX, ^http:\/\/\w{32}\.jddebug\.com\/diagnose\?, REJECT
 ^https?:\/\/app\.dewu\.com\/api\/v1\/app\/advertisement reject
 ^https?:\/\/cdn\.poizon\.com\/node-common\/.*.jpg reject-200
 
-# 和风天气 //hfapp-service.qweather.net
-^https:\/\/hfapp-service\.qweather\.net\/v2\.0\/app\/ad\/list\? reject-dict
-
 # 盒马
 ^https:\/\/acs-m\.freshippo\.com\/gw\/mtop\.wdk\.render\.querysinglepage\/ reject-dict
 
@@ -296,9 +293,6 @@ URL-REGEX, ^http:\/\/\w{32}\.jddebug\.com\/diagnose\?, REJECT
 ^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg reject-dict
 ^https:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_\d+\.json reject-dict
 ^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(?:brandcpt-vedio|waimai-alita)\/\w+\.zip$ reject-dict
-
-# 网上国网 //osg-service.sgcc.com.cn
-^https:\/\/osg-service\.sgcc\.com\.cn:18600\/emss-pfa-appset-front\/bootpageoutter\/ reject-dict
 
 # 小米商城 //api.m.mi.com, shop-api.retail.mi.com
 ^https:\/\/api\.m\.mi\.com\/v1\/order\/expressView response-body-json-del data.bottom.ad_info
@@ -338,4 +332,4 @@ http-response ^https?:\/\/adserviceretry\.kglink\.cn\/v\d\/mobile\w+ script-path
 http-response ^https:\/\/api\.m\.mi\.com\/v1\/app\/start script-path = https://raw.githubusercontent.com/Winnie08899/Loon/refs/heads/main/myBlockAds.js, requires-body = true, tag = mi_mall
 
 [MITM]
-hostname = ad.12306.cn, mobile.12306.cn, list-app-m.i4.cn, *api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, app.dewu.com, cdn.poizon.com, hfapp-service.qweather.net, acs-m.freshippo.com, api.m.jd.com, gab.122.gov.cn, api.coolapk.com, adserviceretry.kglink.cn, gateway.kugou.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, api.m.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com
+hostname = ad.12306.cn, mobile.12306.cn, list-app-m.i4.cn, *api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, app.dewu.com, cdn.poizon.com, acs-m.freshippo.com, api.m.jd.com, gab.122.gov.cn, api.coolapk.com, adserviceretry.kglink.cn, gateway.kugou.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, api.m.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com
